@@ -1,10 +1,10 @@
+const http = require("http");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const fs = require("fs");
 const app = express();
-const https = require("https");
-const http = require("http");
+//const https = require("https");
 
 //local
 const configuration = require("./app/config/environment/configuration.js");
@@ -33,3 +33,13 @@ const PORT = process.env.PORT || 3009;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+
+// http
+//   .createServer((request, response) => {
+//     response.writeHead(200, {
+//       "Content-type": "text/plan",
+//     });
+//     response.write("hola world");
+//     response.end();
+//   })
+//   .listen(1337);

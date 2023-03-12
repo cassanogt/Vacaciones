@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tema C</title>
+
+    <link rel="stylesheet" href="styles.scss">
+    <head>
+
+  <body>
+    <header class="text-center"><h1>Solicitud de Vacaciones</h1></header>
+    <main>
+      <form action="">
+        <div class="text-center">
+          <label for="codigo_usuario"> Ingrese su codigo de empleado</label>
+          <input type="text" name="txt.codigo_usuario" id="tags" required />
+          <button type="button" onclick="getCodigoUsuario()" class="btn btn-large btn-primary">Buscar Usuario</button>
+
+          <p id="text"></p>
+        </div>
+      </form>
+    </main>
+
+    <table id="tabla-usuarios" class="table">
+      <thead class="bg-info">
+        <th>codigo usuario</th>
+        <th>nombre</th>
+        <th>departamento</th>
+        <!-- <th>dias_vacaciones</th> -->
+        <th>dias_pendientes</th>
+        <th>solicitud</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Solicitud Dias Vacaciones</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="dataModal">
+            <h3 id="diasPendientes" class="text-center">cualquier cosa</h3>
+            <input type="hidden" id="inputDiasPendientes" value="" />
+            <label for="dias_solicitados">Cuantos dias solicitas?</label>
+            <input type="text" name="txt.dias_solicitados" id="dias_solicitados" required>
+            <input type="text" name="paraUdpate" id="paraUdpate" hidden>
+          </div>
+
+          <div class="fechas" >
+            <label for="">Escoje la fecha inicial</label>
+            <input type="date" name="calendarioInicio" id="calendarioInicio">
+            <label for="">Hasta</label>
+            <input type="date" name="calendarioFinal" id="calendarioFinal" readonly>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+                      >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary" onclick="getDiasSolicitados()">Validando</button>
+                      </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="./../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./axios.js"></script>
+  </body>
+</html>

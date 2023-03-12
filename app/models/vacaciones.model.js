@@ -95,3 +95,12 @@ Vacaciones.vacacionesDelete = (codigo_usuario, result) => {
 };
 
 module.exports = Vacaciones;
+
+// Vacaciones.vacacionesUpdate = (codigo_usuario, body, result) => {
+//   let SQL = ``;
+//   SQL = `UPDATE usuario
+//   SET nombre_usuario = '${body.nombre_usuario}',
+//   departamento_usuario = '${body.departamento_usuario}',
+//   dias_vacaciones = ${body.dias_vacaciones},
+//   dias_pendientes_vacaciones = ${body.dias_pendientes_vacaciones}
+//   WHERE codigo_usuario=${codigo_usuario}`;
